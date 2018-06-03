@@ -4,12 +4,17 @@ include(ExternalProject)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Set location for all installation of libs
+set(BASE_INSTALL_DIR $ENV{HOME}/dev/3rdparty)
 
 set(BOOST_ROOT ${CMAKE_SOURCE_DIR}/boost)
-set(BOOST_INSTALL_DIR ${CMAKE_SOURCE_DIR}/install/boost)
-set(OPENCV_ROOT ${CMAKE_SOURCE_DIR}/opencv)
-set(OPENCV_INSTALL_DIR ${CMAKE_SOURCE_DIR}/install/opencv)
+set(BOOST_INSTALL_DIR ${BASE_INSTALL_DIR}/boost)
 
+set(OPENCV_ROOT ${CMAKE_SOURCE_DIR}/opencv)
+set(OPENCV_INSTALL_DIR ${BASE_INSTALL_DIR}/opencv)
+
+# --------------------------------------------------------------------------
+# boost
 
 ExternalProject_Add(
         boost
@@ -32,6 +37,9 @@ ExternalProject_Add(
 
 
 
+# --------------------------------------------------------------------------
+# OpenCV
+
 ExternalProject_Add(opencv
         PREFIX            ${OPENCV_ROOT}
         TMP_DIR           ${OPENCV_ROOT}/temp
@@ -43,6 +51,7 @@ ExternalProject_Add(opencv
         #BINARY_DIR opencv-build
         UPDATE_COMMAND ""
         PATCH_COMMAND ""
+        #--Build step-------------
         CMAKE_GENERATOR ${gen}
         CMAKE_ARGS
         -DCMAKE_BUILD_TYPE:STRING=Release
@@ -53,6 +62,7 @@ ExternalProject_Add(opencv
         -DBUILD_SHARED_LIBS:BOOL=ON
         -DBUILD_TESTS:BOOL=OFF
         -DWITH_FFMPEG:BOOL=OFF
+        #--Install step---------------
         -DCMAKE_INSTALL_PREFIX:PATH=${OPENCV_INSTALL_DIR}
         )
 
