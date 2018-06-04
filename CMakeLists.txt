@@ -5,13 +5,15 @@ include(ExternalProject)
 set(CMAKE_CXX_STANDARD 17)
 
 # Set location for all installation of libs
-set(BASE_INSTALL_DIR $ENV{HOME}/dev/3rdparty)
+set(BASE_INSTALL_DIR /usr/local/)
 
 set(BOOST_ROOT ${CMAKE_SOURCE_DIR}/boost)
-set(BOOST_INSTALL_DIR ${BASE_INSTALL_DIR}/boost)
+set(BOOST_INSTALL_DIR ${BASE_INSTALL_DIR})
 
 set(OPENCV_ROOT ${CMAKE_SOURCE_DIR}/opencv)
-set(OPENCV_INSTALL_DIR ${BASE_INSTALL_DIR}/opencv)
+set(OPENCV_INSTALL_DIR ${BASE_INSTALL_DIR})
+
+message("Install prefix = " ${CMAKE_INSTALL_PREFIX})
 
 # --------------------------------------------------------------------------
 # boost
