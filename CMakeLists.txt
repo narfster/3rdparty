@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.5.1)
 
 include(ExternalProject)
 
@@ -30,7 +30,15 @@ ExternalProject_Add(
         #--Configure step-------------
         CONFIGURE_COMMAND ./bootstrap.sh --prefix=${BOOST_INSTALL_DIR}
         #--Build step-------------
-        BUILD_COMMAND     ./b2 install -j8 --with-filesystem
+        BUILD_COMMAND     ./b2 install -j8
+        --with-filesystem
+        --with-system
+        --with-atomic
+        --with-date_time
+        --with-log
+        --with-regex
+        --with-thread
+        --with-math
         BUILD_IN_SOURCE   true
         #--Install step---------------
         INSTALL_COMMAND   ""
@@ -49,6 +57,7 @@ ExternalProject_Add(opencv
          #--Download step--------------
         DOWNLOAD_DIR      ${OPENCV_ROOT}/download
         URL https://github.com/opencv/opencv/archive/3.4.1.zip
+        TIMEOUT "60"
         #SOURCE_DIR opencv
         #BINARY_DIR opencv-build
         UPDATE_COMMAND ""
