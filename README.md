@@ -1,4 +1,3 @@
-
 # super build for boost and opencv linux
 
 ## Introduction
