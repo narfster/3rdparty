@@ -15,7 +15,7 @@ Yes it's just script, and yes it's yet another super build cmake script but what
 
 ## Requirements
 
-This script is for programmers familiar with cmake and who basic control over setup of these 3rd party libs.
+This script is for programmers familiar with cmake and who need basic control over setup of these 3rd party libs.
 
 * **git** you need it.
 * **gcc** or a diffrent compiler you won't get far without one.
