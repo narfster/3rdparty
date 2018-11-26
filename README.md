@@ -8,7 +8,7 @@ Yes it's just script, and yes it's yet another super build cmake script but what
 
 ## Description (aka what it does..)
 
-- Downloads a release of opencv / boost from offcial repo
+- Downloads source release of opencv / boost from offcial repo
 - Builds.
 - Installs.
 - simple to understand and modify.
