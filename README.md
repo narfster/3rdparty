@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A cmake script to setup boost or opencv on your system.
+A cmake script to setup [boost](https://www.boost.org/) or [opencv](https://opencv.org/) on your system.
 
 Yes it's just script, and yes it's yet another super build cmake script but what it does is no less then ***magic***!
 
