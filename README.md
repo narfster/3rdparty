@@ -19,7 +19,7 @@ This script is for programmers familiar with cmake and who basic control over se
 
 * **git** you need it.
 * **gcc** or a diffrent compiler you won't get far without one.
-
+* **cmake 3.5.1** after all it is a cmake script
 ## Usage
 
 ```
