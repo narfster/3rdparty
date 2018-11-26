@@ -6,12 +6,12 @@ A cmake script to setup [boost](https://www.boost.org/) or [opencv](https://open
 
 Yes it's just script, and yes it's yet another super build cmake script but what it does is no less then ***magic***!
 
-## Description
+## Description (aka what it does..)
 
-- Downloads from offcial repo
-- Builds 
-- Installs 
-- simple to understand and modify 
+- Downloads a release of opencv / boost from offcial repo
+- Builds.
+- Installs.
+- simple to understand and modify.
 
 ## Requirements
 
