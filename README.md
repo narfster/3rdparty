@@ -1,3 +1,4 @@
+
 # super build for boost and opencv linux
 
 ## Introduction
@@ -29,4 +30,8 @@ sudo make boost              # make boost
 sudo make opencv             # make opencv
 ```
 ***it's magic!***
+
+
+## Licence 
+It's FOSS!
 
