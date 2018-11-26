@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5.1)
 
 include(ExternalProject)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
 # Set location for all installation of libs
 set(BASE_INSTALL_DIR /usr/local/)
@@ -25,8 +25,8 @@ ExternalProject_Add(
         STAMP_DIR         ${BOOST_ROOT}/stamp
         #--Download step--------------
         DOWNLOAD_DIR      ${BOOST_ROOT}/download
-        URL               https://dl.bintray.com/boostorg/release/1.64.0/source/boost_1_64_0.tar.gz
-        URL_HASH          SHA256=0445c22a5ef3bd69f5dfb48354978421a85ab395254a26b1ffb0aa1bfd63a108
+        URL               https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.gz
+        URL_HASH          SHA256=bd0df411efd9a585e5a2212275f8762079fed8842264954675a4fddc46cfcf60
         #--Configure step-------------
         CONFIGURE_COMMAND ./bootstrap.sh --prefix=${BOOST_INSTALL_DIR}
         #--Build step-------------
